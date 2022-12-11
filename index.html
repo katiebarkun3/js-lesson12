@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson14</title>
+    <style>
+        .color {
+            background-color: red;
+        }
+
+        .block {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .fs{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    
+<!--     <button onclick="changeColor()">нажми меня</button>   -->
+
+    <button>тык</button>
+
+
+    <div class="block">text</div>
+
+    <script>
+        /* 1 */
+
+        /* function changeColor() {
+            let el = document.querySelector('.block');
+            el.classList.toggle('color');
+        } */
+
+       /*  document.querySelector('button').onclick = function changeColor(){
+            let el = document.querySelector('.block');
+            el.classList.toggle('color');
+        } */
+
+        function fs() { 
+            let el = document.querySelector('.block');    
+            el.style.fontSize = '30px';
+        }
+
+        /* 2 */
+
+        let bt = document.querySelector('button');
+        let count = 0;
+        bt.addEventListener('click', function(){
+            changeColor();
+            changeFS();
+        });
+
+
+
+        let changeColor = function(){
+            let el = document.querySelector('.block');
+            el.classList.toggle('color');
+        }
+
+        /* function changeFS(){
+            let el = document.querySelector('.block');
+            el.classList.toggle('fs');
+        } */
+        setTimeout(function(){
+           /*  bt.removeEventListener('click', changeColor) */
+           count++;
+        }, 3000)
+
+
+
+    </script>
+
+
+</body>
+</html>
